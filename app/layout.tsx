@@ -2,6 +2,7 @@ import type React from "react"
 import "./globals.css"
 import { Inter } from "next/font/google"
 import { TranslationProvider } from "@/hooks/use-translation"
+import { CartProvider } from './context/CartContext'
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import WhatsAppButton from "@/components/whatsapp-button"
@@ -11,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "House Plast - منتجات بلاستيكية عالية الجودة",
   description: "شركة رائدة في مجال تصنيع المنتجات البلاستيكية واللزق بخبرة تمتد لأكثر من 15 عامًا",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -20,16 +21,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ar" dir="rtl">
-      <body className={inter.className}>
-        <TranslationProvider>
-          <div className="flex min-h-screen flex-col">
+    <html lang="ar" dir="rtl" className={inter.className}>
+      <body>
+        <CartProvider>
+          <TranslationProvider>
             <Header />
-            <main className="flex-grow">{children}</main>
+            {children}
             <Footer />
             <WhatsAppButton />
-          </div>
-        </TranslationProvider>
+          </TranslationProvider>
+        </CartProvider>
       </body>
     </html>
   )
