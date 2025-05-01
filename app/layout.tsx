@@ -2,10 +2,10 @@ import type React from "react"
 import "./globals.css"
 import { Inter } from "next/font/google"
 import { TranslationProvider } from "@/hooks/use-translation"
-import { CartProvider } from './context/CartContext'
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import WhatsAppButton from "@/components/whatsapp-button"
+import { CartProvider } from "./context/CartContext"
 
 const inter = Inter({ subsets: ["latin"] })
 
