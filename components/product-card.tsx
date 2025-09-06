@@ -64,23 +64,23 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
       </div>
 
-      <div className="p-4">
-        <span className="text-sm text-gray-500">{product.category}</span>
-        <h3 className="font-semibold text-lg mb-2 hover:text-red-600">
+      <div className="p-3 sm:p-4">
+        <span className="text-xs sm:text-sm text-gray-500">{product.category}</span>
+        <h3 className="font-semibold text-base sm:text-lg mb-2 hover:text-red-600 line-clamp-2">
           <Link href={`/products/${product.id}`}>{product.name}</Link>
         </h3>
         <div className="flex items-center justify-between">
-          <div>
-            <span className="font-bold text-red-600">{product.price} جنيه</span>
+          <div className="flex flex-col sm:flex-row sm:items-center">
+            <span className="font-bold text-red-600 text-sm sm:text-base">{product.price} جنيه</span>
             {product.oldPrice && (
-              <span className="text-gray-500 line-through text-sm mr-2">{product.oldPrice} جنيه</span>
+              <span className="text-gray-500 line-through text-xs sm:text-sm mr-2">{product.oldPrice} جنيه</span>
             )}
           </div>
           <div className="flex items-center">
             {[1, 2, 3, 4, 5].map((star) => (
               <svg
                 key={star}
-                className={`h-4 w-4 ${star <= product.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`}
+                className={`h-3 w-3 sm:h-4 sm:w-4 ${star <= product.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >

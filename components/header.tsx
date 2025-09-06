@@ -46,25 +46,24 @@ export default function Header() {
       {/* Top Bar */}
       <div className="bg-gray-100 py-2 border-b border-gray-200">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
+          <div className="flex flex-row justify-between items-center gap-2">
+            <div className="flex flex-row items-center space-x-2 sm:space-x-4 space-x-reverse">
               <div className="flex items-center">
-                <Phone className="h-4 w-4 ml-1 text-red-600" />
-                <span className="text-xs sm:text-sm">+201025593051</span>
+                <Phone className="h-3 w-3 ml-1 text-red-600" />
+                <span className="text-xs">+201025593051</span>
               </div>
               <div className="flex items-center">
-                <Phone className="h-4 w-4 ml-1 text-red-600" />
-                <span className="text-xs sm:text-sm">+201025448470</span>
+                <Phone className="h-3 w-3 ml-1 text-red-600" />
+                <span className="text-xs">+201025448470</span>
               </div>
               <div className="flex items-center">
-                <Mail className="h-4 w-4 ml-1 text-red-600" />
-                <span className="text-xs sm:text-sm hidden sm:inline">info@houseplast.com</span>
-                <span className="text-xs sm:hidden">info@houseplast.com</span>
+                <Mail className="h-3 w-3 ml-1 text-red-600" />
+                <span className="text-xs hidden sm:inline">info@houseplast.com</span>
               </div>
             </div>
             <div className="flex items-center">
-              <button className="flex items-center text-xs sm:text-sm hover:text-red-600" onClick={toggleLanguage}>
-                <Globe className="h-4 w-4 ml-1 text-red-600" />
+              <button className="flex items-center text-xs hover:text-red-600" onClick={toggleLanguage}>
+                <Globe className="h-3 w-3 ml-1 text-red-600" />
                 <span>{locale === "ar" ? "English" : "العربية"}</span>
               </button>
             </div>

@@ -69,16 +69,16 @@ export default function ProductsPage() {
       </section>
 
       {/* Filters Section */}
-      <section className="py-6 sm:py-8 bg-gray-50">
+      <section className="py-4 sm:py-6 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
             {/* Search */}
             <div className="relative w-full sm:w-2/3 md:w-1/2 lg:w-1/3">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4 sm:h-5 sm:w-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
               <input
                 type="text"
                 placeholder="ابحث عن منتج..."
-                className="w-full pl-9 sm:pl-10 pr-4 py-2 sm:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                className="w-full pl-9 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -86,10 +86,10 @@ export default function ProductsPage() {
 
             {/* Category Filter */}
             <div className="flex items-center w-full sm:w-auto">
-              <Filter className="mr-2 text-gray-600 h-4 w-4 sm:h-5 sm:w-5" />
-              <span className="mr-2 text-gray-600 text-sm sm:text-base">تصفية حسب:</span>
+              <Filter className="mr-2 text-gray-600 h-4 w-4" />
+              <span className="mr-2 text-gray-600 text-sm">تصفية حسب:</span>
               <select
-                className="border border-gray-300 rounded-md px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                className="flex-1 sm:flex-none border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
               >
@@ -109,7 +109,7 @@ export default function ProductsPage() {
         <div className="container mx-auto px-4">
           {filteredProducts.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
                 {currentProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
@@ -117,32 +117,34 @@ export default function ProductsPage() {
 
               {/* Pagination */}
               {totalPages > 1 && (
-                <div className="flex justify-center mt-8 sm:mt-12">
-                  <nav className="flex items-center">
+                <div className="flex justify-center mt-6 sm:mt-8">
+                  <nav className="flex items-center overflow-x-auto">
                     <button
                       onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                       disabled={currentPage === 1}
-                      className="px-3 sm:px-4 py-2 border border-gray-300 rounded-l-md bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
+                      className="px-2 sm:px-3 py-2 border border-gray-300 rounded-l-md bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed text-xs sm:text-sm whitespace-nowrap"
                     >
                       السابق
                     </button>
 
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                      <button
-                        key={page}
-                        onClick={() => setCurrentPage(page)}
-                        className={`px-3 sm:px-4 py-2 border border-gray-300 text-sm sm:text-base ${
-                          currentPage === page ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-50"
-                        }`}
-                      >
-                        {page}
-                      </button>
-                    ))}
+                    <div className="flex">
+                      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                        <button
+                          key={page}
+                          onClick={() => setCurrentPage(page)}
+                          className={`px-2 sm:px-3 py-2 border border-gray-300 text-xs sm:text-sm ${
+                            currentPage === page ? "bg-blue-600 text-white" : "bg-white text-gray-700 hover:bg-gray-50"
+                          }`}
+                        >
+                          {page}
+                        </button>
+                      ))}
+                    </div>
 
                     <button
                       onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
                       disabled={currentPage === totalPages}
-                      className="px-3 sm:px-4 py-2 border border-gray-300 rounded-r-md bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
+                      className="px-2 sm:px-3 py-2 border border-gray-300 rounded-r-md bg-white text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed text-xs sm:text-sm whitespace-nowrap"
                     >
                       التالي
                     </button>
@@ -151,9 +153,9 @@ export default function ProductsPage() {
               )}
             </>
           ) : (
-            <div className="text-center py-8 sm:py-12">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">لا توجد منتجات متطابقة مع بحثك</h3>
-              <p className="text-gray-600 text-sm sm:text-base">حاول تغيير معايير البحث أو التصفية</p>
+            <div className="text-center py-6 sm:py-8">
+              <h3 className="text-base sm:text-lg font-semibold mb-2">لا توجد منتجات متطابقة مع بحثك</h3>
+              <p className="text-gray-600 text-sm">حاول تغيير معايير البحث أو التصفية</p>
             </div>
           )}
         </div>
