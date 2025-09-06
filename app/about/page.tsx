@@ -5,42 +5,32 @@ export default function AboutPage() {
   const teamMembers = [
     {
       id: 1,
-      name: "أحمد محمد",
+      name: "فراس شحادة",
       position: "المدير التنفيذي",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/43.jpg",
       bio: "خبرة أكثر من 15 عامًا في صناعة البلاستيك",
     },
     {
       id: 2,
-      name: "سارة أحمد",
+      name: "عمار شحادة",
       position: "مدير الإنتاج",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "متخصصة في تطوير المنتجات وتحسين جودة الإنتاج",
-    },
-    {
-      id: 3,
-      name: "محمد علي",
-      position: "مدير المبيعات",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "خبير في تطوير استراتيجيات المبيعات وخدمة العملاء",
-    },
-    {
-      id: 4,
-      name: "نورا حسن",
-      position: "مدير التسويق",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "متخصصة في التسويق الرقمي وتطوير العلامة التجارية",
+      image: "/44.jpg",
+      bio: "متخصص في تطوير المنتجات وتحسين جودة الإنتاج",
     },
   ]
 
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="bg-blue-700 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="bg-blue-700 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/45.jpg" alt="مصنع شركة أيوب للتجارة والتوريدات" className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-blue-700/80"></div>
+        </div>
+        <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">من نحن</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            شركة رائدة في مجال تصنيع المنتجات البلاستيكية واللزق بخبرة تمتد لأكثر من 15 عامًا
+            شركة أيوب للتجارة والتوريدات رائدة في مجال تصنيع المنتجات البلاستيكية واللزق بخبرة تمتد لأكثر من 15 عامًا
           </p>
         </div>
       </section>
@@ -52,7 +42,7 @@ export default function AboutPage() {
             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
               <h2 className="text-3xl font-bold mb-6">قصتنا</h2>
               <p className="text-gray-600 mb-4">
-                تأسست شركة Plastic Site في عام 2008 بهدف تقديم منتجات بلاستيكية عالية الجودة للسوق المحلي والإقليمي.
+                تأسست شركة أيوب للتجارة والتوريدات في عام 2008 بهدف تقديم منتجات بلاستيكية عالية الجودة للسوق المحلي والإقليمي.
                 بدأنا بمصنع صغير وفريق من 10 موظفين، وتوسعنا على مر السنين لنصبح واحدة من الشركات الرائدة في مجال صناعة
                 البلاستيك.
               </p>
@@ -67,8 +57,8 @@ export default function AboutPage() {
             </div>
             <div className="md:w-1/2">
               <img
-                src="/placeholder.svg?height=400&width=500"
-                alt="تاريخ شركة Plastic Site"
+                src="/37.jpg"
+                alt="تاريخ شركة أيوب للتجارة والتوريدات"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>
@@ -145,7 +135,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member) => (
               <TeamMember key={member.id} member={member} />
             ))}
@@ -174,23 +164,23 @@ export default function AboutPage() {
             </div>
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
               <img
-                src="/placeholder.svg?height=250&width=300"
-                alt="مصنع Plastic Site"
+                src="/39.jpg"
+                alt="مصنع شركة أيوب للتجارة والتوريدات"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
               <img
-                src="/placeholder.svg?height=250&width=300"
-                alt="خط إنتاج Plastic Site"
+                src="/40.jpg"
+                alt="خط إنتاج شركة أيوب للتجارة والتوريدات"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
               <img
-                src="/placeholder.svg?height=250&width=300"
-                alt="مختبر الجودة Plastic Site"
+                src="/41.jpg"
+                alt="مختبر الجودة شركة أيوب للتجارة والتوريدات"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
               <img
-                src="/placeholder.svg?height=250&width=300"
-                alt="مستودع Plastic Site"
+                src="/42.jpg"
+                alt="مستودع شركة أيوب للتجارة والتوريدات"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>

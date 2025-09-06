@@ -99,7 +99,7 @@ export default function ContactPage() {
             <div className="bg-gray-50 p-6 rounded-lg text-center">
               <MapPin className="h-10 w-10 text-blue-600 mx-auto mb-4" />
               <h3 className="font-semibold text-lg mb-2">العنوان</h3>
-              <p className="text-gray-600">المنطقة الصناعية، القاهرة، مصر</p>
+              <p className="text-gray-600">6 أكتوبر، المنطقة الصناعية الأولى، أمام بنك الإسكندرية</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg text-center">
               <Clock className="h-10 w-10 text-blue-600 mx-auto mb-4" />
@@ -235,7 +235,7 @@ export default function ContactPage() {
                 </div>
                 <div className="mt-4">
                   <h3 className="font-semibold text-lg mb-2">العنوان</h3>
-                  <p className="text-gray-600">المنطقة الصناعية، القاهرة، مصر</p>
+                  <p className="text-gray-600">6 أكتوبر، المنطقة الصناعية الأولى، أمام بنك الإسكندرية</p>
                 </div>
               </div>
             </div>

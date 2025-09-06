@@ -50,11 +50,15 @@ export default function Header() {
             <div className="flex items-center space-x-4 space-x-reverse mb-2 md:mb-0">
               <div className="flex items-center">
                 <Phone className="h-4 w-4 ml-1 text-red-600" />
-                <span className="text-sm">+20 123 456 7890</span>
+                <span className="text-sm">+201025593051</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 ml-1 text-red-600" />
+                <span className="text-sm">+201025448470</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 ml-1 text-red-600" />
-                <span className="text-sm">info@plasticsite.com</span>
+                <span className="text-sm">info@houseplast.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-4 space-x-reverse">
@@ -73,12 +77,7 @@ export default function Header() {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <div className="relative h-12 w-40">
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-red-600">House</span>
-                  <span className="text-2xl font-bold text-gray-800">Plast</span>
-                </div>
-              </div>
+              <img src="/logo_houseplast.png" alt="شركة أيوب للتجارة والتوريدات Logo" className="h-12 md:h-16 rounded-full object-cover" />
             </Link>
 
             {/* Desktop Navigation */}

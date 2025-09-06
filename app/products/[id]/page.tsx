@@ -38,7 +38,7 @@ export default function ProductDetailPage() {
     if (!product) return
 
     const message = `مرحباً، أرغب في طلب المنتج: ${product.name} (${product.sku}) بسعر ${product.price} جنيه، الكمية: ${quantity}`
-    const whatsappUrl = `https://wa.me/201030796415?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/201025593051?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }
 

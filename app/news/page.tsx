@@ -8,8 +8,12 @@ export default function NewsPage() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="bg-blue-700 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
+      <section className="bg-blue-700 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/47.jpg" alt="أخبار شركة أيوب للتجارة والتوريدات" className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-blue-700/80"></div>
+        </div>
+        <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">أخبار وتحديثات</h1>
           <p className="text-xl max-w-3xl mx-auto">تابع آخر أخبار شركتنا والتطورات في صناعة البلاستيك</p>
         </div>
@@ -24,7 +28,7 @@ export default function NewsPage() {
                 key={item.id}
                 className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 transition-transform hover:translate-y-[-5px]"
               >
-                <img src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-48 object-cover" />
+                <img src={item.image || "/43.jpg"} alt={item.title} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <div className="flex items-center text-sm text-gray-500 mb-3">
                     <span className="flex items-center mr-4">

@@ -34,8 +34,12 @@ export default function FaqsPage() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="bg-blue-700 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
+      <section className="bg-blue-700 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/44.jpg" alt="مصنع شركة أيوب للتجارة والتوريدات" className="w-full h-full object-cover opacity-20" />
+          <div className="absolute inset-0 bg-blue-700/80"></div>
+        </div>
+        <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">الأسئلة الشائعة</h1>
           <p className="text-xl max-w-3xl mx-auto">إجابات على الأسئلة الأكثر شيوعًا حول منتجاتنا وخدماتنا</p>
         </div>

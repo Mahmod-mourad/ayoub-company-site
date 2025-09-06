@@ -152,7 +152,7 @@ export const enTranslations = {
     total: "Total",
     quantity: "Quantity",
     contactInfo: "Contact Information",
-    companyAddress: "Industrial Zone, Cairo, Egypt",
+    companyAddress: "6th October, First Industrial Zone, in front of Alexandria Bank",
     errors: {
       firstName: "Please enter your first name",
       lastName: "Please enter your last name",

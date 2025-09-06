@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, ArrowRight } from "lucide-react"
+import { Facebook, Mail, Phone, MapPin, ArrowRight } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -10,25 +10,14 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center mb-4">
-              <span className="text-2xl font-bold text-red-500">House</span>
-              <span className="text-2xl font-bold text-white">Plast</span>
+              <img src="/logo_houseplast_inverse.png" alt="شركة أيوب للتجارة والتوريدات Logo" className="h-12 rounded-full object-cover" />
             </div>
             <p className="text-gray-400 mb-4">
-              شركة رائدة في مجال تصنيع المنتجات البلاستيكية واللزق بخبرة تمتد لأكثر من 15 عامًا. نقدم منتجات عالية الجودة
-              تلبي احتياجات عملائنا في مختلف القطاعات.
+              متخصصون في تصنيع جميع الاشرطه اللاصقه و مواد التعبئه و التغليف فيما يفوق ال15 عاما من الخبره و الامانه و الجوده
             </p>
             <div className="flex space-x-4 space-x-reverse">
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors">
+              <a href="https://www.facebook.com/share/1FCJcfYGQA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500 transition-colors">
                 <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-red-500 transition-colors">
-                <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -82,15 +71,23 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-red-500 mt-1 ml-2 flex-shrink-0" />
-                <span className="text-gray-400">المنطقة الصناعية، القاهرة، مصر</span>
+                <span className="text-gray-400">6 أكتوبر، المنطقة الصناعية الأولى، أمام بنك الإسكندرية</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-red-500 ml-2 flex-shrink-0" />
-                <span className="text-gray-400">+20 123 456 7890</span>
+                <span className="text-gray-400">+201025593051</span>
+              </li>
+              <li className="flex items-center">
+                <Phone className="h-5 w-5 text-red-500 ml-2 flex-shrink-0" />
+                <span className="text-gray-400">+201025448470</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-red-500 ml-2 flex-shrink-0" />
-                <span className="text-gray-400">info@plasticsite.com</span>
+                <span className="text-gray-400">info@houseplast.com</span>
+              </li>
+              <li className="flex items-center">
+                <Mail className="h-5 w-5 text-red-500 ml-2 flex-shrink-0" />
+                <span className="text-gray-400">export@houseplast.com</span>
               </li>
             </ul>
           </div>
@@ -122,7 +119,10 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-2 md:mb-0">
-              &copy; {new Date().getFullYear()} House Plast. جميع الحقوق محفوظة.
+              &copy; {new Date().getFullYear()} شركة أيوب للتجارة والتوريدات. جميع الحقوق محفوظة | سياسة الخصوصية.
+            </p>
+            <p className="text-gray-400 text-sm mb-2 md:mb-0">
+              Developed By Shoman systems.
             </p>
             <div className="flex space-x-4 space-x-reverse text-sm text-gray-400">
               <a href="#" className="hover:text-red-500 transition-colors">

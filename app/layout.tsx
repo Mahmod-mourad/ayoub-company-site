@@ -10,8 +10,8 @@ import { CartProvider } from "./context/CartContext"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "House Plast - منتجات بلاستيكية عالية الجودة",
-  description: "شركة رائدة في مجال تصنيع المنتجات البلاستيكية واللزق بخبرة تمتد لأكثر من 15 عامًا",
+  title: "شركة أيوب للتجارة والتوريدات - منتجات بلاستيكية عالية الجودة",
+  description: "شركة أيوب للتجارة والتوريدات رائدة في مجال تصنيع المنتجات البلاستيكية واللزق بخبرة تمتد لأكثر من 15 عامًا",
   generator: 'v0.dev'
 }
 
