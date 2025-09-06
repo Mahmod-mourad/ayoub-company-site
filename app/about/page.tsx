@@ -22,40 +22,40 @@ export default function AboutPage() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="bg-blue-700 text-white py-20 relative overflow-hidden">
+      <section className="bg-blue-700 text-white py-12 sm:py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0">
           <img src="/45.jpg" alt="مصنع شركة أيوب للتجارة والتوريدات" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-blue-700/80"></div>
         </div>
         <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">من نحن</h1>
-          <p className="text-xl max-w-3xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">من نحن</h1>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto">
             شركة أيوب للتجارة والتوريدات رائدة في مجال تصنيع المنتجات البلاستيكية واللزق بخبرة تمتد لأكثر من 15 عامًا
           </p>
         </div>
       </section>
 
       {/* Our Story */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-              <h2 className="text-3xl font-bold mb-6">قصتنا</h2>
-              <p className="text-gray-600 mb-4">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="lg:w-1/2 mb-8 sm:mb-10 lg:mb-0 lg:pr-8 xl:pr-10">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">قصتنا</h2>
+              <p className="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">
                 تأسست شركة أيوب للتجارة والتوريدات في عام 2008 بهدف تقديم منتجات بلاستيكية عالية الجودة للسوق المحلي والإقليمي.
                 بدأنا بمصنع صغير وفريق من 10 موظفين، وتوسعنا على مر السنين لنصبح واحدة من الشركات الرائدة في مجال صناعة
                 البلاستيك.
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4 text-sm sm:text-base leading-relaxed">
                 منذ البداية، كان هدفنا هو تقديم منتجات تلبي أعلى معايير الجودة والسلامة. استثمرنا في أحدث التقنيات
                 والمعدات، وعملنا على تطوير فريق من الخبراء المتخصصين في مجال صناعة البلاستيك.
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 اليوم، نفخر بتقديم مجموعة واسعة من المنتجات البلاستيكية التي تخدم مختلف القطاعات، من الصناعات الثقيلة
                 إلى الاستخدامات المنزلية اليومية.
               </p>
             </div>
-            <div className="md:w-1/2">
+            <div className="lg:w-1/2">
               <img
                 src="/37.jpg"
                 alt="تاريخ شركة أيوب للتجارة والتوريدات"
@@ -67,57 +67,57 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">قيمنا</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">قيمنا</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
               نحن نؤمن بأن النجاح يأتي من الالتزام بمجموعة من القيم الأساسية التي توجه كل ما نقوم به
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <Award className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="font-semibold text-xl mb-2">الجودة</h3>
-              <p className="text-gray-600">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+              <Award className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-blue-600 mb-3 sm:mb-4" />
+              <h3 className="font-semibold text-lg sm:text-xl mb-2">الجودة</h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 نلتزم بتقديم منتجات عالية الجودة تلبي أو تتجاوز توقعات عملائنا. نستخدم أفضل المواد ونطبق أعلى معايير
                 الجودة في كل مرحلة من مراحل الإنتاج.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <Leaf className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="font-semibold text-xl mb-2">الاستدامة</h3>
-              <p className="text-gray-600">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+              <Leaf className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-blue-600 mb-3 sm:mb-4" />
+              <h3 className="font-semibold text-lg sm:text-xl mb-2">الاستدامة</h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 نحن ملتزمون بتقليل تأثيرنا البيئي من خلال استخدام مواد قابلة لإعادة التدوير وتطبيق ممارسات التصنيع
                 المستدامة.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <Users className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="font-semibold text-xl mb-2">العملاء أولاً</h3>
-              <p className="text-gray-600">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+              <Users className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-blue-600 mb-3 sm:mb-4" />
+              <h3 className="font-semibold text-lg sm:text-xl mb-2">العملاء أولاً</h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 نضع عملاءنا في مقدمة أولوياتنا ونسعى جاهدين لفهم احتياجاتهم وتقديم حلول تناسبهم.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <TrendingUp className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="font-semibold text-xl mb-2">الابتكار</h3>
-              <p className="text-gray-600">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+              <TrendingUp className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-blue-600 mb-3 sm:mb-4" />
+              <h3 className="font-semibold text-lg sm:text-xl mb-2">الابتكار</h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 نستثمر في البحث والتطوير لتقديم منتجات مبتكرة تلبي الاحتياجات المتغيرة للسوق.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <Clock className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="font-semibold text-xl mb-2">الالتزام</h3>
-              <p className="text-gray-600">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+              <Clock className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-blue-600 mb-3 sm:mb-4" />
+              <h3 className="font-semibold text-lg sm:text-xl mb-2">الالتزام</h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 نلتزم بمواعيد التسليم ونحرص على تقديم خدمة موثوقة لعملائنا في جميع الأوقات.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <Shield className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="font-semibold text-xl mb-2">السلامة</h3>
-              <p className="text-gray-600">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+              <Shield className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-blue-600 mb-3 sm:mb-4" />
+              <h3 className="font-semibold text-lg sm:text-xl mb-2">السلامة</h3>
+              <p className="text-gray-600 text-sm sm:text-base">
                 نضع سلامة موظفينا وعملائنا في المقام الأول ونطبق أعلى معايير السلامة في جميع عملياتنا.
               </p>
             </div>
